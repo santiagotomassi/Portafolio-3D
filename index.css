@@ -1,0 +1,65 @@
+@import url('./galeria/galerias.css');
+@import url('seccion.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300&display=swap');
+
+:root {
+    --colorgeneral: rgb(90, 66, 4); /* Replace #ff0000 with the color value you want */
+  }
+  
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    min-height: 100vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+header{
+    height: 52px;
+    width: auto;
+    padding: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid var(--colorgeneral);
+    -webkit-box-shadow: 0px 5px 61px 2px var(--colorgeneral);
+    -moz-box-shadow: 0px 5px 61px 2px var(--colorgeneral);
+    box-shadow: 0px 5px 61px 2px var(--colorgeneral);
+
+    nav{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    figure{
+        height: 42px;
+        width: auto;
+        padding-inline: 10px;
+    }
+
+    img{
+        height: 42px;
+        width: auto;
+        margin-inline: 5px;
+    }
+
+    figcaption{
+        font-size: x-large;
+    }
+}
+
+main{
+    flex: 1;
+    padding-block: 15px;
+}
