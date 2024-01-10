@@ -1,5 +1,5 @@
 function loadGallery(keyword) {
-    fetch(`./galeria/galeria${keyword}.html`)
+    fetch(`galeria${keyword}.html`)
         .then(response => response.text())
         .then(data => {
             document.getElementById('mainContent').innerHTML = data;
