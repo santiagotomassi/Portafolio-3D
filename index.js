@@ -63,13 +63,3 @@ document.addEventListener('keydown', function(event) {
             break;
     }
 });
-
-var swiper = new Swiper('.swiper-container', {
-    loop: true,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-});
-
-
