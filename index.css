@@ -3,7 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300&display=swap');
 
 :root {
-    --colorgeneral: rgb(90, 66, 4); /* Replace #ff0000 with the color value you want */
+    --colorgeneral: rgb(90, 66, 4);
+    --galeria-margen-block: 35px;
 }
   
 *{
@@ -31,32 +32,32 @@ header{
     -moz-box-shadow: 0px 5px 61px 2px var(--colorgeneral);
     box-shadow: 0px 5px 61px 2px var(--colorgeneral);
 
-    nav{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-    }
+}
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 
-    a{
-        text-decoration: none;
-    }
+a{
+    text-decoration: none;
+}
 
-    figure{
-        height: 42px;
-        width: auto;
-        padding-inline: 10px;
-    }
+figure{
+    height: 42px;
+    width: auto;
+    padding-inline: 10px;
+}
 
-    img{
-        height: 42px;
-        width: auto;
-        margin-inline: 5px;
-    }
+img{
+    height: 42px;
+    width: auto;
+    margin-inline: 5px;
+}
 
-    figcaption{
-        font-size: x-large;
-    }
+figcaption{
+    font-size: x-large;
 }
 
 main{

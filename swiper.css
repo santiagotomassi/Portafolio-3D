@@ -76,27 +76,50 @@ swiper-slide {
     height: 5vh;
     padding: 5px;
     
-    div{
-        height: 100%;
-        width: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+  }
+  .footer-swiper  div{
+      height: 100%;
+      width: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
 
-    a{
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    figure{
-        height: 25%;
-        width: 75%;
-        background-color: var(--colorgeneral);
-    }
-}
+  .footer-swiper a{
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  
+  .footer-swiper figure{
+    height: 25%;
+    width: 75%;
+    background-color: var(--colorgeneral);
+    transition: 0s;
+  }
+
+  .footer-swiper figure:hover{
+    animation: tilt-shaking 0.5s ease-in-out infinite;
+  }
+
+  .lapiz-uno{
+    border-radius: 10% 10% 10% 10% / 100% 0% 0% 100%;
+  }
+  
+  .lapiz-dos{
+    border-radius: 10% 10% 10% 10% / 0% 100% 100% 0%;
+  }
+
+  @keyframes tilt-shaking {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(0.5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-0.5deg); }
+    100% { transform: rotate(0deg); }
+  }
 
 @media screen and (max-width: 425px){
   swiper-slide img {
