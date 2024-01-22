@@ -47,12 +47,6 @@ a{
     justify-content: center;
 }
 
-figure{
-    height: auto;
-    width: auto;
-    padding-inline: 10px;
-}
-
 img{
     height: 42px;
     width: auto;
