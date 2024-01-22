@@ -2,7 +2,6 @@
     display: grid;
     gap: 10px;
     padding-inline: 10px;
-
 }
 
 .gallery a {
@@ -13,10 +12,22 @@
     border: 2px solid var(--colorgeneral);
     display: block;
     transition: box-shadow 0.3s ease-in-out;
+    margin: 0;
 }
 
+.gallery a:hover {
+    border: 2px solid var(--colorgeneral);
+    box-shadow: 0px 0px 20px 0px var(--colorgeneral);
+}
 
 .gallery video {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery img {
     width: 100%;
     height: auto;
     display: block;

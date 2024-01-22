@@ -2,13 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300&display=swap');
 
 :root {
-    --colorgeneral: rgb(90, 66, 4);
+    --colorgeneral: #6AC6FF;
     --galeria-margen-block: 35px;
 }
   
 *{
-    margin: 0;
-    padding: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 body{
@@ -26,10 +24,11 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 2px solid var(--colorgeneral);
-    -webkit-box-shadow: 0px 5px 61px 2px var(--colorgeneral);
-    -moz-box-shadow: 0px 5px 61px 2px var(--colorgeneral);
-    box-shadow: 0px 5px 61px 2px var(--colorgeneral);
+    border-radius: 5px;
+    border: 1px solid var(--colorgeneral);
+    -webkit-box-shadow: 0px 0px 10px 0px var(--colorgeneral);
+    -moz-box-shadow: 0px 0px 10px 0px var(--colorgeneral);
+    box-shadow: 0px 0px 10px 0px var(--colorgeneral);
 
 }
 nav{
@@ -41,10 +40,15 @@ nav{
 
 a{
     text-decoration: none;
+    height: 42px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 figure{
-    height: 42px;
+    height: auto;
     width: auto;
     padding-inline: 10px;
 }
@@ -55,11 +59,48 @@ img{
     margin-inline: 5px;
 }
 
-figcaption{
-    font-size: x-large;
-}
 
 main{
     flex: 1;
     padding-block: 15px;
+}
+
+body::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--colorgeneral); /* Color of the thumb */
+    border-radius: 2px; /* Rounded corners of the thumb */
+    background: linear-gradient(-45deg, #23a6d5, #28bdf3, #1c80a5, #0c8bb9);
+    animation: gradient 15s ease infinite;
+}
+
+body::-webkit-scrollbar-track {
+background-color: black; /* Color of the track */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    scrollbar-color: var(--colorgeneral); /* thumb and track colors for Firefox */
+    background-color: var(--colorgeneral); /* Color of the thumb on hover */
+    box-shadow: 0px 0px 10px 0px var(--colorgeneral);
+}
+
+/* Optionally, hide the default scrollbar */
+body {
+scrollbar-width: thin; /* "auto" or "thin" for Firefox support */
+scrollbar-color: var(--colorgeneral); /* thumb and track colors for Firefox */
+
+}
+
+@keyframes gradient {
+0% {
+    background-position: 0% 50%;
+}
+50% {
+    background-position: 100% 50%;
+}
+100% {
+    background-position: 0% 50%;
+}
 }
