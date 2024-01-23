@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300&display=swap');
 
 :root {
-    --colorgeneral: #6AC6FF;
+    --colorgeneral: #AFEEEE;
     --galeria-margen-block: 35px;
 }
   
@@ -64,9 +64,8 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: var(--colorgeneral); /* Color of the thumb */
+    background-color: transparent; /* Color of the thumb */
     border-radius: 2px; /* Rounded corners of the thumb */
-    background: linear-gradient(-45deg, #23a6d5, #28bdf3, #1c80a5, #0c8bb9);
     animation: gradient 15s ease infinite;
 }
 
@@ -75,26 +74,13 @@ background-color: black; /* Color of the track */
 }
 
 body::-webkit-scrollbar-thumb:hover {
-    scrollbar-color: var(--colorgeneral); /* thumb and track colors for Firefox */
-    background-color: var(--colorgeneral); /* Color of the thumb on hover */
-    box-shadow: 0px 0px 10px 0px var(--colorgeneral);
+    scrollbar-color: transparent; /* thumb and track colors for Firefox */
+    background-color: transparent; /* Color of the thumb on hover */
+    box-shadow: 0px 0px 10px 0px transparent;
 }
 
 /* Optionally, hide the default scrollbar */
 body {
 scrollbar-width: thin; /* "auto" or "thin" for Firefox support */
-scrollbar-color: var(--colorgeneral); /* thumb and track colors for Firefox */
-
-}
-
-@keyframes gradient {
-0% {
-    background-position: 0% 50%;
-}
-50% {
-    background-position: 100% 50%;
-}
-100% {
-    background-position: 0% 50%;
-}
+scrollbar-color: transparent; /* thumb and track colors for Firefox */
 }
