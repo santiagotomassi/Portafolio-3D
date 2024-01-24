@@ -69,10 +69,11 @@
     flex-direction: column;
     justify-content: center;
     margin-block: var(--galeria-margen-block);
+
 }
 .galeria3 h1{
     text-align: center;
-    color: white;
+    color: var(--colorgeneral);
     font-size: xxx-large;
     margin-block: var(--galeria-margen-block);
 }
@@ -80,7 +81,7 @@
 .galeria3 p{
     width: 75vw;
     text-align: center;
-    color: white;
+    color: var(--colorgeneral);
     margin: 0 auto;
     margin-block: var(--galeria-margen-block);
 }

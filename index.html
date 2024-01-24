@@ -121,46 +121,55 @@
         </script>
         
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                // Retrieve the lastAlertTimestamp from localStorage
-                var lastAlertTimestamp = localStorage.getItem('lastAlertTimestamp');
+            document.addEventListener('DOMContentLoaded', function () {
+            // Retrieve the lastAlertTimestamp from localStorage 3600000
+            var lastAlertTimestamp = localStorage.getItem('lastAlertTimestamp');
 
-                // Check if the alert hasn't been shown in the last minute
-                if (!lastAlertTimestamp || (Date.now() - parseInt(lastAlertTimestamp, 10)) >= 1000) {
-                    // Invoke showAlert when the document is ready
-                    showAlert('<p>Your additional message here</p>');
+            // Check if the alert hasn't been shown in the last hour (3600 seconds)
+            if (!lastAlertTimestamp || (Date.now() - parseInt(lastAlertTimestamp, 10)) >= 3600000) {
+                // Invoke showAlert when the document is ready
+                showAlert();
 
-                    // Update the timestamp in localStorage
-                    localStorage.setItem('lastAlertTimestamp', Date.now().toString());
+                // Update the timestamp in localStorage
+                localStorage.setItem('lastAlertTimestamp', Date.now().toString());
+            }
+            });
+
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') {
+                closeAlert();
                 }
             });
 
-        
-            function showAlert(message) {
-                var alertContainer = document.createElement('div');
-                alertContainer.innerHTML = '<div class="alerta-card">' +
-                    '<h1>PUTETO EL QUE LEE</h1>' +
-                    message +
-                    '<button type="button" class="cerrar-btn" onclick="closeAlert()">CERRAR</button></div>';
-                document.body.appendChild(alertContainer);
-        
+            function showAlert() {
+                var alertContainer = document.getElementById('alertContent');
+                alertContainer.style.display = 'flex';
                 alertContainer.style.position = 'fixed';
+                alertContainer.style.alignItems = 'center';
+                alertContainer.style.justifyContent = 'space-evenly';
+                alertContainer.style.flexDirection = 'column';
                 alertContainer.style.top = '50%';
                 alertContainer.style.left = '50%';
                 alertContainer.style.transform = 'translate(-50%, -50%)';
             }
-        
+
             function closeAlert() {
-                var alertContainer = document.querySelector('.alerta-card');
+                var alertContainer = document.getElementById('alertContent');
                 if (alertContainer) {
                     alertContainer.style.animation = 'fadeOut 0.7s ease-in-out';
-                    setTimeout(function() {
+                    setTimeout(function () {
                         alertContainer.remove();
                     }, 500);
                 }
             }
         </script>
-        
+          <div id="alertContent" class="alerta-card" style="display: none;">
+            <h1>Use the keyboard for a better experience</h1>
+            <h2>Number keys for Galleries display</h2>
+            <h1>1 2 3</h1>
+            <h2>Arrow keys for Gallery interaction</h2>
+            <button type="button" class="cerrar-btn" onclick="closeAlert()">Close</button>
+          </div>
     
         <style>
             /* Add your CSS styles for the alert here */
@@ -171,18 +180,12 @@
                 height: 75vh;
                 width: 50vw;
                 border-radius: 10px;
-                box-shadow: 0px 0px 10px 0px var(--colorgeneral);
                 margin: 20px;
-                position: relative;
                 animation: fadeIn 0.7s ease-in-out; /* Add fade-in animation */
                 z-index: 1000;
-                border: 2px solid var(--colorgeneral);
                 text-align: center;
-                display: flex;
-                align-items: center;
-                justify-content: space-evenly;
-                flex-direction: column;
                 box-shadow: 0px 0px 100px 0px var(--colorgeneral) inset;
+                
             }
     
             .cerrar-btn {
@@ -217,9 +220,8 @@
                 }
             }
         </style>
-    
-        <footer id="alerta"></footer>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
     </body>
 </html>
 
