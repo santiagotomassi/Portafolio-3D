@@ -59,7 +59,6 @@
 
 
 .galeria3 {
-    max-height: auto;
     height: auto;
 }
 
@@ -85,11 +84,24 @@
     margin: 0 auto;
     margin-block: var(--galeria-margen-block);
 }
-.galeria3 footer{
+.galeria3 .logros{
     display: flex;
     align-items: center;
     justify-content: space-around;
     margin-block: var(--galeria-margen-block);
+    height: 15vh;
+}
+
+
+.galeria3footer{
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.galeria3footer a{
+    height: auto;
 }
 
 
@@ -150,6 +162,11 @@
     .galeria3 img{
         height: 32px;
     }
+
+    .logros img{
+        margin-inline: 20px;
+    }
+    
 }
 
 
@@ -166,5 +183,8 @@
     }
     .galeria3 img{
         height: 64px;
+    }
+    .logros img{
+        margin-inline: 20px;
     }
 }
