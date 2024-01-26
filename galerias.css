@@ -60,30 +60,88 @@
 
 .galeria3 {
     height: auto;
-}
-
-.galeria3 article{
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    margin-block: var(--galeria-margen-block);
-
+    margin-block: var(--galeria-margen-block2);
 }
-.galeria3 h1{
+
+.galeria3 .santi-perfil{
+    height: 514px;
+    width: 384px; 
+    border-radius: 10px; 
+    box-shadow: 0px 0px 10px 0px var(--colorgeneral);
+    border: 3px solid var(--colorgeneral);
+    
+}
+
+.galeria3 div{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+
+.galeria3 article{
+    max-width: 50vw;
+}
+.galeria3 .title{
     text-align: center;
-    color: var(--colorgeneral);
     font-size: xxx-large;
-    margin-block: var(--galeria-margen-block);
+    margin-block: var(--galeria-margen-block2);
+}
+
+.galeria3 h2, h3 {
+    text-align: center;
+    margin-block: var(--galeria-margen-block2);
+}
+
+.galeria3 em{
+    display: block; 
+    text-align: center;
+    margin-block: var(--galeria-margen-block2);
+}
+
+.galeria3 .summary{
+    display: flex;
+    text-align: start;
+    align-items: center;
+    justify-content: start;
+    margin-block: var(--galeria-margen-block2);
+}
+
+.galeria3 .summary h1{
+    border-bottom: 2px solid white; /* You can adjust the color and thickness as needed */
+    display: inline-block; /* Ensures that the border only spans the width of the content */
+    padding-bottom: 5px; 
+    width: 100%;
 }
 
 .galeria3 p{
     width: 75vw;
-    text-align: center;
-    color: var(--colorgeneral);
     margin: 0 auto;
-    margin-block: var(--galeria-margen-block);
+    margin-block: var(--galeria-margen-block2);
 }
+
+.galeria3 .workflow{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.galeria3 .workflow figure{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+
+
+}
+
+
+
 .galeria3 .logros{
     display: flex;
     align-items: center;
@@ -97,7 +155,8 @@
     height: 15vh;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    text-align: center;
 }
 
 .galeria3footer a{
@@ -108,14 +167,16 @@
 
 /* Media queries for responsiveness */
 @media screen and (max-width: 464px) {
-    .galeria3 h1{
-        font-size: large;
+    .galeria3 .santi-perfil{
+        height: 257px;
+        width: 192px; 
+        border-radius: 10px; 
+        box-shadow: 0px 0px 10px 0px var(--colorgeneral);
+        border: 1px solid var(--colorgeneral);
     }
-    .galeria3 p{
-        font-size: medium;
-    }
-    .galeria3  footer img{
-        height: 32px;
+
+    .galeria3 article{
+        max-width: 90vw;
     }
 }
 @media screen and (min-width:464px) and (max-width: 768px) {
@@ -131,20 +192,23 @@
     .galeria3  footer img{
         height: 32px;
     }
+
+    .galeria3 article{
+        max-width: 75vw;
+    }
+    
 }
 
 @media screen and (min-width:768px) and (max-width: 1024px) {
     .gallery {
         grid-template-columns: repeat(3, 1fr);
     }
-    .galeria3 h1{
-        font-size: x-large;
-    }
-    .galeria3 p{
-        font-size: medium;
-    }
     .galeria3 footer img{
         height: 64px;
+    }
+
+    .galeria3 article{
+        max-width: 75vw;
     }
 }
 
@@ -153,12 +217,6 @@
         grid-template-columns: repeat(4, 1fr);
     }
 
-    .galeria3 h1{
-        font-size: x-large;
-    }
-    .galeria3 p{
-        font-size: medium;
-    }
     .galeria3 img{
         height: 32px;
     }
@@ -173,13 +231,6 @@
 @media screen and (min-width:1200px) {
     .gallery {
         grid-template-columns: repeat(4, 1fr);
-    }
-
-    .galeria3 h1{
-        font-size: xxx-large;
-    }
-    .galeria3 p{
-        font-size: x-large;
     }
     .galeria3 img{
         height: 64px;
