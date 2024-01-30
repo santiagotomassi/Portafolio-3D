@@ -3,12 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 :root {
-    --colorgeneral: #AFEEEE;
+    --colorgeneral: rgb(231, 231, 231);
     --galeria-margen-block: 35px;
     --galeria-margen-block2: 14px;
 }
   *{font-family: 'Poppins', sans-serif;
-    color: white;}
+    color: white;
+    scrollbar-color: transparent transparent;
+}
 body{
     min-height: 100vh;
     width: auto;
@@ -40,7 +42,7 @@ nav{
 
 a{
     text-decoration: none;
-    height: 42px;
+    height: auto;
     width: auto;
     display: flex;
     align-items: center;
@@ -48,7 +50,7 @@ a{
 }
 
 img{
-    height: 42px;
+    height: 38px;
     width: auto;
     margin-inline: 5px;
 }
