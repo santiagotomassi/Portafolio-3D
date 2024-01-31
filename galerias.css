@@ -33,26 +33,9 @@
     transition: transform 0.3s ease-in-out;
 }
 
-.gallery a:hover video {
-    display: none;
-}
-
 .gallery .hovernone {
     width: 100%;
     height: auto;
-    display: block;
-}
-
-.gallery .hover {
-    width: 100%;
-    height: auto;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-     display: none;
-}
-
-.gallery a:hover .hover {
-    opacity: 1;
     display: block;
 }
 
@@ -72,7 +55,6 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    margin-block: var(--galeria-margen-block2);
 }
 
 .galeria3 .santi-perfil{
@@ -131,11 +113,28 @@
 .galeria3 .summary div {
     display: flex;
     align-items: center;
-    justify-content: start;
     flex-wrap: wrap;
-    border-bottom: 2px solid white;
     width: 100%;
     height: auto;
+}
+.subrayado{
+    border-bottom: 2px solid white;
+}
+
+.certificacion{
+    max-width: 50%;
+    display: flex; 
+    text-align: center; 
+    align-items: center; 
+    justify-content: space-evenly;
+}
+
+.certificados{
+    text-align: center;
+    display: flex; 
+    text-align: center; 
+    align-items: center; 
+    justify-content: space-evenly;
 }
 
 .wrapearlo-about{
@@ -143,15 +142,10 @@
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-
 }
 
 
-.galeria3 p{
-    width: 75vw;
-    margin: 0 auto;
-    margin-block: var(--galeria-margen-block2);
-}
+
 
 .galeria3 .workflow{
     display: flex;
@@ -192,8 +186,53 @@
     height: auto;
 }
 
+.footer-about{
+    height: auto;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer-about-copywrite{
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-about-copywrite small{
+    width: 33%;
+    text-align: center;
+}
+
+.rookie{
+    height: auto; 
+    width: 100%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    flex-wrap: wrap;
+}
 
 
+
+@media screen and (max-width: 768px) {
+    .certificacion{
+        max-width: 100%;
+        display: flex; 
+        text-align: center; 
+        align-items: center; 
+        justify-content: center;
+    }
+    .footer-about-copywrite small{
+        margin: 10px 4px;
+        width: auto;
+    }
+}
 /* Media queries for responsiveness */
 @media screen and (max-width: 464px) {
     .galeria3 .santi-perfil{

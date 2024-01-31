@@ -40,19 +40,42 @@ nav{
     justify-content: space-around;
 }
 
-a{
+a {
     text-decoration: none;
     height: auto;
     width: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative; /* Set the parent position to relative */
 }
 
-img{
+.Header-s-img {
     height: 38px;
     width: auto;
     margin-inline: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+span {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    color: white;
+    position: absolute; /* Position the span absolutely */
+    top: 50%; /* Align the top of the span to the middle of the parent */
+    left: 50%; /* Align the left of the span to the middle of the parent */
+    transform: translate(-50%, -50%); /* Center the span exactly over the image */
+}
+
+a:hover .Header-s-img,
+a:focus .Header-s-img {
+    transform: scale(0);
+}
+
+a:hover span,
+a:focus span {
+    opacity: 1;
+    text-align: center;
 }
 
 

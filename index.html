@@ -34,13 +34,16 @@
         <header class="Header-s">
             <nav>
                 <a href="#" id="galeryOneLink" class="active">
-                        <img src="LOGO ST.svg" alt="holasimg">
+                        <img class="Header-s-img" src="LOGO ST.svg" alt="holasimg">
+                        <span>About</span>
                 </a>
                 <a href="#" id="galeryTwoLink">
-                        <img src="PORTFOLIO.svg" alt="holasimg">
+                        <img class="Header-s-img" src="PORTFOLIO.svg" alt="holasimg">
+                        <span>Portfolio</span>
                 </a>
                 <a href="#" id="galeryThreeLink">
-                        <img src="MUSEUM.svg" alt="holasimg">
+                        <img class="Header-s-img" src="MUSEUM.svg" alt="holasimg">
+                        <span>Museum</span>
                 </a>
             </nav>
         </header>
@@ -114,108 +117,28 @@
             }
         });
 
+        function handleKey(key) {
+            // Remove 'active' class from all links
+            document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
+
+            // Add 'active' class to the corresponding link
+            const linkId = `galery${key}Link`;
+            const link = document.getElementById(linkId);
+            if (link) {
+                link.classList.add('active');
+                loadGallery(key);
+            }
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === '1' || event.key === '2' || event.key === '3') {
+                event.preventDefault();
+                handleKey(event.key);
+            }
+        });
+
         </script>
         
-        <!-- <script>
-            document.addEventListener('DOMContentLoaded', function () {
-            // Retrieve the lastAlertTimestamp from localStorage 3600000
-            var lastAlertTimestamp = localStorage.getItem('lastAlertTimestamp');
-
-            // Check if the alert hasn't been shown in the last hour (3600 seconds)
-            if (!lastAlertTimestamp || (Date.now() - parseInt(lastAlertTimestamp, 10)) >= 3600000) {
-                // Invoke showAlert when the document is ready
-                showAlert();
-
-                // Update the timestamp in localStorage
-                localStorage.setItem('lastAlertTimestamp', Date.now().toString());
-            }
-            });
-
-            document.addEventListener('keydown', function (event) {
-                if (event.key === 'Escape') {
-                closeAlert();
-                }
-            });
-
-            function showAlert() {
-                var alertContainer = document.getElementById('alertContent');
-                alertContainer.style.display = 'flex';
-                alertContainer.style.position = 'fixed';
-                alertContainer.style.alignItems = 'center';
-                alertContainer.style.justifyContent = 'space-evenly';
-                alertContainer.style.flexDirection = 'column';
-                alertContainer.style.top = '50%';
-                alertContainer.style.left = '50%';
-                alertContainer.style.transform = 'translate(-50%, -50%)';
-            }
-
-            function closeAlert() {
-                var alertContainer = document.getElementById('alertContent');
-                if (alertContainer) {
-                    alertContainer.style.animation = 'fadeOut 0.7s ease-in-out';
-                    setTimeout(function () {
-                        alertContainer.remove();
-                    }, 500);
-                }
-            }
-        </script>
-          <div id="alertContent" class="alerta-card" style="display: none;">
-            <h1>Use the keyboard for a better experience</h1>
-            <h2>Number keys for Galleries display</h2>
-            <h1>1 2 3</h1>
-            <h2>Arrow keys for Gallery interaction</h2>
-            <button type="button" class="cerrar-btn" onclick="closeAlert()">Close</button>
-          </div>
-    
-        <style>
-            /* Add your CSS styles for the alert here */
-            .alerta-card {
-                background-color: #87cefa0c; /* Light blue background color */
-                color: var(--colorgeneral); /* White text color */
-                padding: 20px;
-                height: 75vh;
-                width: 50vw;
-                border-radius: 10px;
-                margin: 20px;
-                animation: fadeIn 0.7s ease-in-out; /* Add fade-in animation */
-                z-index: 1000;
-                text-align: center;
-                box-shadow: 0px 0px 100px 0px var(--colorgeneral) inset;
-                
-            }
-    
-            .cerrar-btn {
-                background: none;
-                border: none;
-                cursor: pointer;
-                outline: none;
-                color: var(--colorgeneral);
-                font-size: large;
-            }
-    
-            .cerrar-btn img {
-                width: 20px;
-                height: 20px;
-            }
-    
-            @keyframes fadeIn {
-                from {
-                    opacity: 0;
-                }
-                to {
-                    opacity: 1;
-                }
-            }
-
-            @keyframes fadeOut {
-                from {
-                    opacity: 1;
-                }
-                to {
-                    opacity: 0;
-                }
-            }
-        </style> -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
     </body>
