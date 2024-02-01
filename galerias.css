@@ -66,13 +66,13 @@
     
 }
 
-.galeria3 div{
+.perfil{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 20px;
 }
-
 
 .galeria3 article{
     max-width: 50vw;
@@ -98,7 +98,7 @@
     display: flex;
     text-align: start;
     align-items: center;
-    justify-content: start;
+    flex-wrap: wrap;
     margin-block: var(--galeria-margen-block2);
 }
 
@@ -110,7 +110,7 @@
     margin-inline: 10px;/* Ensures that the border only spans the width of the content */
     height: 42px;
 }
-.galeria3 .summary div {
+.suplente {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -126,7 +126,7 @@
     display: flex; 
     text-align: center; 
     align-items: center; 
-    justify-content: space-evenly;
+    justify-content: start;
 }
 
 .certificados{
@@ -134,13 +134,13 @@
     display: flex; 
     text-align: center; 
     align-items: center; 
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .wrapearlo-about{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: start;
     flex-wrap: wrap;
 }
 
@@ -197,7 +197,7 @@
 
 .footer-about-copywrite{
     height: auto;
-    width: 100%;
+    width: 95%;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -218,6 +218,47 @@
     flex-wrap: wrap;
 }
 
+.footer-inspiracional{
+    width: auto; 
+    height: auto; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    margin-block: var(--galeria-margen-block);
+}
+
+.footer-inspiracional-em{
+    width: 90vw; 
+    height: auto; 
+    text-align: center; 
+    padding: 10px;
+}
+
+.optimizing{
+    display: flex;
+    text-align: start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 75vw;
+    margin-bottom: 75px; 
+    border: 1px solid lightgray; 
+    border-radius: 10px; 
+    padding: 20px; 
+    box-shadow: 0px 0px 10px 0px lightgray;
+}
+
+.optimizing-h1{
+    border-bottom: 3px solid lightgray;
+    padding-bottom: 10px;
+}
+
+.wrapearlo-about figure{
+    margin: 5px;
+    padding: 5px;
+    max-height: 200px;
+    max-width: 200px;
+}
 
 
 @media screen and (max-width: 768px) {
