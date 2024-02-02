@@ -4,8 +4,9 @@
     <meta charset="utf-8" />
     <title>Santiago Tomassi - 3D Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-    <link rel="stylesheet" href="index.css">
     <!-- Favicon -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="swiper.css">
     <link rel="icon" type="image/png" href="https://santiagotomassi.github.io/Portfolio-3D/LOGOST.png" />
     <!-- Open Graph Meta Tags for Facebook and LinkedIn -->
     <meta property="og:title" content="Santiago Tomassi - 3D Portfolio" />
@@ -28,53 +29,54 @@
     <meta property="tiktok:site" content="@tomassi.art" />
     <meta property="tiktok:url" content="https://santiagotomassi.github.io/Portfolio-3D/index.html" />
     <meta property="tiktok:title" content="Santiago Tomassi - 3D Portfolio" />
+    <link rel="stylesheet" href="galerias.css">
   </head>
 
-<body class="body-swiper">
-  <header class="Header-s">
-    <nav>
-        <a id="link1" href="https://santiagotomassi.github.io/Portafolio-3D/index.html" class="active">
-                <img class="Header-s-img" src="LOGOST.svg" alt="holasimg">
-                <span>About</span>
-        </a>
-        <a id="link2" href="https://santiagotomassi.github.io/Portafolio-3D/index2.html">
-                <img class="Header-s-img" src="PORTFOLIO.svg" alt="holasimg">
-                <span>Portfolio</span>
-        </a>
-        <a id="link3" href="https://santiagotomassi.github.io/Portafolio-3D/index3.html">
-                <img class="Header-s-img" src="MUSEUM.svg" alt="holasimg">
-                <span>Museum</span>
-        </a>
-    </nav>
-  </header>
-  <swiper-container style="--swiper-navigation-color: var(--colorgeneral); --swiper-pagination-color: var(--colorgeneral);" class="mySwiper"
-    thumbs-swiper=".mySwiper2" loop="true" space-between="10" navigation="false"
-    keyboard="true" direction="vertical" pagination="true" pagination-clickable="true" pagination-type="progressbar" mousewheel="true">
+  <body class="body-swiper">
+    <header class="Header-s">
+      <nav>
+          <a id="link1" href="https://santiagotomassi.github.io/Portfolio-3D/index.html" class="active">
+                  <img class="Header-s-img" src="LOGOST.svg" alt="holasimg">
+                  <span>About</span>
+          </a>
+          <a id="link2" href="https://santiagotomassi.github.io/Portfolio-3D/index2.html">
+                  <img class="Header-s-img" src="PORTFOLIO.svg" alt="holasimg">
+                  <span>Portfolio</span>
+          </a>
+          <a id="link3" href="https://santiagotomassi.github.io/Portfolio-3D/index3.html">
+                  <img class="Header-s-img" src="MUSEUM.svg" alt="holasimg">
+                  <span>Museum</span>
+          </a>
+      </nav>
+    </header>
+    <swiper-container style="--swiper-navigation-color: var(--colorgeneral); --swiper-pagination-color: var(--colorgeneral);" class="mySwiper"
+      thumbs-swiper=".mySwiper2" loop="true" space-between="10" navigation="false"
+      keyboard="true" direction="vertical" pagination="true" pagination-clickable="true" pagination-type="progressbar" mousewheel="true">
+      <swiper-slide>
+        <img src="https://cdnb.artstation.com/p/assets/images/images/071/652/245/large/santiago-tomassi-apa1.jpg?1705627199" />
+      </swiper-slide>
+    </swiper-container>
+
+    <swiper-container class="mySwiper2" loop="true" space-between="10" slides-per-view="4" free-mode="true"
+    watch-slides-progress="true">
     <swiper-slide>
       <img src="https://cdnb.artstation.com/p/assets/images/images/071/652/245/large/santiago-tomassi-apa1.jpg?1705627199" />
     </swiper-slide>
-  </swiper-container>
-
-  <swiper-container class="mySwiper2" loop="true" space-between="10" slides-per-view="4" free-mode="true"
-  watch-slides-progress="true">
-  <swiper-slide>
-    <img src="https://cdnb.artstation.com/p/assets/images/images/071/652/245/large/santiago-tomassi-apa1.jpg?1705627199" />
-  </swiper-slide>
-  </swiper-container>
-  <footer class="footer-swiper">
-    <div>
-        <a id="iz" href="panther.html">
-            <figure class="lapiz-uno"></figure>
-        </a>
-        <a id="de" href="sand.html">
-            <figure class="lapiz-dos"></figure>
-        </a>
-    </div>
-  </footer>
-  <script src="index.js"></script>
-  <script src="seccion.js"></script>
-  <script src="switch.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-</body>
+    </swiper-container>
+    <footer class="footer-swiper">
+      <div>
+          <a id="iz" href="panther.html">
+              <figure class="lapiz-uno"></figure>
+          </a>
+          <a id="de" href="sand.html">
+              <figure class="lapiz-dos"></figure>
+          </a>
+      </div>
+    </footer>
+    <script src="index.js"></script>
+    <script src="seccion.js"></script>
+    <script src="switch.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  </body>
 
 </html>
